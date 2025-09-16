@@ -22,10 +22,10 @@ services:
       - neo4j_majo
     env_file:
       - .env # Load all environment variables from .env file
-    networks:
-      - app_network
     ports:
       - "${EXPRESS_PORT}:3000"
+    networks:
+      - app_network
 
 volumes:
   neo4j_data:

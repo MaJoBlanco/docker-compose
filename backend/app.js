@@ -15,20 +15,6 @@ const driver = neo4j.driver(
 // Middleware para parsear JSON en peticiones POST
 app.use(express.json());
 
-// Endpoint de prueba: Películas
-app.get("/movies", async (req, res) => {
-  const session = driver.session();
-  try {
-    const result = await session.run("MATCH (m:Movie) RETURN m.title AS title LIMIT 10");
-    const movies = result.records.map(record => record.get("title"));
-    res.json(movies);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  } finally {
-    await session.close();
-  }
-});
-
 // ✅ Endpoint GET: Personas
 app.get("/personas", async (req, res) => {
   const session = driver.session();
