@@ -17,4 +17,4 @@ Y se evidencia que se creo correctamente dicho dato
 <img width="874" height="477" alt="image" src="https://github.com/user-attachments/assets/7d48a24f-c310-482b-9c4f-311c55d6572c" />
 
 
-
+Respuesta final: La red mas practica para sistemas distribuidos es la user-defined bridge ya que esta permite acceder con el nombre del servicio y permite que permanezca al momento de reiniciar la maquina, cosa contraria con bridge por defecto pues esta es dada por docker y esta genera una ip que cambia al momento de iniciar de nuevo el servicio 
